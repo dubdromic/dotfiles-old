@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/corin/.offlineimap'
+let g:netrw_dirhist_2='/home/corin/Code/RT/crashdown/doc'
+let g:netrw_dirhist_3='/home/corin/Code/RT/crashdown/app/assets/stylesheets'
+let g:netrw_dirhist_4='/home/corin/.offlineimap'
+let g:netrw_dirhist_5='/home/corin/Code/wikimedia-puppet/manifests'
+let g:netrw_dirhist_6='/home/corin/Code/RT/puppet/.git'
+let g:netrw_dirhist_7='/home/corin/.mutt'
+let g:netrw_dirhist_8='/home/corin/.offlineimap'

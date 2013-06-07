@@ -1,0 +1,6 @@
+#!/bin/bash
+export WINEPREFIX=/home/corin/.wine
+export WINEDEBUG="-all"
+export LIBGL_DRIVERS_PATH=/usr/lib32/xorg/modules/dri
+export LIBGL_DEBUG=verbose
+taskset -c 1 wine start /Unix "/home/corin/.wine/drive_c/Program Files (x86)/Activision/Call of Duty 2/CoD2MP_s.exe +set com_introplayed 1"

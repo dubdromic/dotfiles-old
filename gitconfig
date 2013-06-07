@@ -1,0 +1,37 @@
+[user]
+  name = Corin Schedler
+  email = corin@dubdromic.com
+
+[core]
+  editor = vim
+
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  ui = true
+  pager = true
+  grep = yes
+
+[merge]
+  tool = vimdiff
+  log = true
+
+[help]
+	autocorrect = 1
+
+[log]
+  decorate = full
+
+[diff]
+  rename = copies
+[push]
+	default = simple
+
+[branch]
+	autosetuprebase = always
+[pull]
+	rebase = true
+[tig]
+  show-id = true

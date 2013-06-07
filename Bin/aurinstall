@@ -1,0 +1,11 @@
+#!/bin/ruby
+
+if ARGV[0]
+  Dir.chdir( ENV['HOME'] + "/Downloads" )
+  `curl -O https://aur.archlinux.org/packages/#{ARGV[0][0..1]}/#{ARGV[0]}/#{ARGV[0]}.tar.gz`
+  puts `tar xvzf #{ARGV[0]}.tar.gz`
+  Dir.chdir("#{Dir.pwd}/#{ARGV[0]}/")
+  puts `makepkg -si`
+else
+  puts "Please specify a package to install."
+end

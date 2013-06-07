@@ -1,0 +1,33 @@
+#!/bin/bash
+
+export DISPLAY=:0
+export XAUTHORITY=/home/corin/.Xauthority
+
+function connect(){
+  sed -i 's/HandleLidSwitch=suspend/HandleLidSwitch=ignore/g' /etc/systemd/logind.conf
+  systemctl restart systemd-logind.service
+  xrandr --output LVDS1 --off --output DP1 --auto
+  /home/corin/bin/wallpaper
+}
+
+function disconnect(){
+  sed -i 's/HandleLidSwitch=ignore/HandleLidSwitch=suspend/g' /etc/systemd/logind.conf
+  systemctl restart systemd-logind.service
+
+  lid="$(grep "closed" /proc/acpi/button/lid/LID/state)"
+
+  xrandr --output DP1 --off --output LVDS1 --auto
+  /home/corin/bin/wallpaper
+
+  if [ -n "$lid" ]; then
+    systemctl suspend
+  fi
+}
+
+mode="$(grep -w "connected" /sys/class/drm/card0-DP-1/status)"
+
+if [ -n "$mode" ]; then
+  connect
+else
+  disconnect
+fi

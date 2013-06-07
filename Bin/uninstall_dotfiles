@@ -1,0 +1,25 @@
+#!/usr/bin/ruby
+
+require "#{Dir.pwd}/Bin/dotfiles_config"
+
+write = (ARGV[0] == "--commit")
+
+puts "Dry run. Use --commit to write changes." if !write
+
+Dir.glob('*').each do |name|
+  prefix = (name == "Bin") ? "" : "."
+  target = File.join(@home_dir, "#{prefix}#{name}")
+
+  next if !File.exists?(target)
+
+  puts "rm #{target}"
+  File.delete(target) if write
+end
+
+@vim_bundles.each do |repo, dir|
+  target = File.join(@vim_bundle_dir, dir)
+  next if !File.exists?(target)
+
+  puts "rm -rf #{target}/"
+  puts `rm -rf #{target}/` if write
+end

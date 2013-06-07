@@ -1,0 +1,43 @@
+#!/usr/bin/ruby
+
+require "#{Dir.pwd}/Bin/dotfiles_config"
+
+write = (ARGV[0] == "--commit")
+
+puts "Dry run. Use --commit to write changes." if !write
+puts "Home:    #{@home_dir}"
+puts "Here:    #{@this_dir}"
+puts "Bundles: #{@vim_bundle_dir}"
+
+Dir.glob('*').each do |name|
+  prefix = (name == "Bin") ? "" : "."
+  target = File.join(@home_dir, "#{prefix}#{name}")
+
+  if File.exists?(target)
+    puts "#{target} exists, skipping." 
+    next
+  end
+
+  puts "#{File.join(@this_dir, name)} to #{target}"
+  File.symlink( File.join(@this_dir, name), target ) if write
+end
+
+@vim_bundles.each do |repo, dir|
+  target = File.join(@vim_bundle_dir, dir)
+
+  if File.exists?(target)
+    puts "#{target} exists, skipping." 
+    next
+  end
+
+  puts "git clone https://github.com/#{repo} #{target}"
+  puts `git clone https://github.com/#{repo} #{target}` if write
+end
+
+if write && File.exists?("#{@vim_bundle_dir}/vim-tomorrow-night/vim")
+  puts "Fixing vim-tomorrow-night"
+  `mv #{@vim_bundle_dir}/vim-tomorrow-night/vim/ #{@vim_bundle_dir}/.`
+  `rm -rf #{@vim_bundle_dir}/vim-tomorrow-night/*`
+  `mv #{@vim_bundle_dir}/vim/* #{@vim_bundle_dir}/vim-tomorrow-night/`
+  `rm #{@vim_bundle_dir}/vim/`
+end

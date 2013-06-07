@@ -1,0 +1,3 @@
+#!/bin/bash
+
+feh --bg-scale /home/corin/Pictures/lotr_paint.jpg

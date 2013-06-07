@@ -1,0 +1,18 @@
+#!/usr/bin/ruby
+
+require 'rb-inotify'
+
+directory=ARGV[0]
+command=ARGV[1]
+
+puts "Watching #{directory} to run command: \"#{command}\""
+
+notify = INotify::Notifier.new
+
+notify.watch(directory, :modify) do |event|
+  puts "Running \"#{command}\""
+  puts %x{#{command}}
+  puts
+end
+
+notify.run
