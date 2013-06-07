@@ -8,7 +8,6 @@ require 'etc'
   "tpope/vim-fugitive.git" => "vim-fugitive",
   "airblade/vim-gitgutter.git" => "vim-gitgutter",
   "embear/vim-gnupg.git" => "vim-gnupg",
-  "Lokaltog/powerline.git" => "vim-powerline",
   "tpope/vim-rails.git" => "vim-rails",
   "jmartindf/vim-tcomment.git" => "vim-tcomment",
   "chriskempson/tomorrow-theme.git" => "vim-tomorrow-night"
