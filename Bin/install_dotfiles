@@ -41,3 +41,9 @@ if write && File.exists?("#{@vim_bundle_dir}/vim-tomorrow-night/vim")
   `mv #{@vim_bundle_dir}/vim/* #{@vim_bundle_dir}/vim-tomorrow-night/`
   `rm #{@vim_bundle_dir}/vim/`
 end
+
+cmd_t_dir = "#{@vim_bundle_dir}/vim-commandt/ruby/command-t"
+if write && File.exists?(cmd_t_dir)
+  puts "Compile Command-T extension"
+  `cd #{cmd_t_dir} && ruby extconf.rb && make`
+end
