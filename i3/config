@@ -172,23 +172,18 @@ bar {
 }
 
 for_window [class="Pidgin" instance="Pidgin"] floating enabled
-for_window [class="Empathy" instance="empathy-chat"] floating enabled
-for_window [class="Empathy" instance="empathy"] floating enabled
 for_window [class="Steam" instance="Steam"] floating enabled
 for_window [class="Xchat"] floating enabled
 for_window [class="Xfce4-notifyd" instance="xfce4-notifyd"] floating enabled
 for_window [class="Gmrun"] floating enabled
 for_window [class="Wine"] floating enabled
-for_window [class="com-aquafold-datastudio-DataStudio"] floating enabled
 for_window [class="Quicksynergy"] floating enabled
 
 workspace_layout stacking
 assign [class="Firefox"] 1
 assign [class="Pidgin" instance="Pidgin"] 4
-assign [class="Spotify"] 5
 
 exec --no-startup-id xsettingsd
-exec --no-startup-id dropboxd
 exec --no-startup-id caffeine
 exec --no-startup-id pidgin
 exec --no-startup-id pnmixer

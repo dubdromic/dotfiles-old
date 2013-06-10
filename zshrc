@@ -8,6 +8,7 @@ PATH=$HOME/.rbenv/bin:$HOME/Bin/:$PATH
 SAVEHIST=1000
 TERM=rxvt-256color
 XDG_CONFIG_HOME=$HOME/.config
+PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 
 export EDITOR
 export TERM

@@ -1,3 +1,3 @@
 pulseaudio --start &
-/home/corin/bin/clamshell.sh &
+/home/corin/Bin/clamshell &
 exec i3

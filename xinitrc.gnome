@@ -1,1 +1,2 @@
-exec gnome-session
+xterm -g 80x24+0+0 &
+exec twm
