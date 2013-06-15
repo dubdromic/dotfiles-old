@@ -6,7 +6,6 @@ require 'etc'
   "mileszs/ack.vim.git" => "vim-ack",
   "Lokaltog/vim-easymotion.git" => "vim-easymotion",
   "tpope/vim-fugitive.git" => "vim-fugitive",
-  "airblade/vim-gitgutter.git" => "vim-gitgutter",
   "embear/vim-gnupg.git" => "vim-gnupg",
   "tpope/vim-rails.git" => "vim-rails",
   "jmartindf/vim-tcomment.git" => "vim-tcomment",
