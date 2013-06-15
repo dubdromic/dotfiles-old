@@ -7,7 +7,7 @@ function connect(){
   sed -i 's/HandleLidSwitch=suspend/HandleLidSwitch=ignore/g' /etc/systemd/logind.conf
   systemctl restart systemd-logind.service
   xrandr --output LVDS1 --off --output DP1 --auto
-  /home/corin/Bin/wallpaper
+  bash /home/corin/Bin/wallpaper
 }
 
 function disconnect(){
@@ -17,7 +17,7 @@ function disconnect(){
   lid="$(grep "closed" /proc/acpi/button/lid/LID/state)"
 
   xrandr --output DP1 --off --output LVDS1 --auto
-  /home/corin/Bin/wallpaper
+  bash /home/corin/Bin/wallpaper
 
   if [ -n "$lid" ]; then
     systemctl suspend
