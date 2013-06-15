@@ -4,9 +4,9 @@ EDITOR=vim
 GIT_SSL_NO_VERIFY=1
 HISTFILE=~/.histfile
 HISTSIZE=1000
-PATH=$HOME/.rbenv/bin:$HOME/Bin/:$PATH
+PATH=$HOME/.rbenv/bin:$HOME/Bin/:$HOME/Code/RT/rt/bin:$PATH
 SAVEHIST=1000
-TERM=rxvt-256color
+TERM=screen-256color
 XDG_CONFIG_HOME=$HOME/.config
 PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 

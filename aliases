@@ -15,3 +15,4 @@ alias notes='vim ~/Dropbox/notes.gpg'
 alias be='bundle exec'
 alias music='ncmpcpp'
 alias pacup='sudo pacman -Syyu'
+alias ssh="TERM=xterm ssh"
