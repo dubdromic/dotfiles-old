@@ -34,7 +34,7 @@ Net/CursorBlinkTime 1200
 Gtk/ShowInputMethodMenu 1
 Net/ThemeName "Adwaita"
 Gtk/TimeoutRepeat 20
-Net/IconThemeName "gnome"
+Net/IconThemeName "faenza"
 Net/FallbackIconTheme "gnome"
 Net/CursorBlink 1
 Gtk/AutoMnemonics 1
