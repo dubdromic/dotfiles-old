@@ -177,6 +177,10 @@ for_window [class="Xchat"] floating enabled
 for_window [class="Xfce4-notifyd" instance="xfce4-notifyd"] floating enabled
 for_window [class="Gmrun"] floating enabled
 for_window [class="Wine"] floating enabled
+for_window [class="Ario"] floating enabled
+for_window [class="Qikea"] floating enabled
+for_window [class="Qikec"] floating enabled
+for_window [class="Sonata"] floating enabled
 for_window [class="Quicksynergy"] floating enabled
 
 workspace_layout stacking
@@ -186,6 +190,6 @@ assign [class="Pidgin" instance="Pidgin"] 4
 exec --no-startup-id xsettingsd
 exec --no-startup-id caffeine
 exec --no-startup-id pidgin
-exec --no-startup-id pnmixer
 exec --no-startup-id firefox
 exec --no-startup-id batti
+exec --no-startup-id mpd
