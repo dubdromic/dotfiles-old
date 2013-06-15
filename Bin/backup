@@ -1,0 +1,3 @@
+#!/bin/bash
+
+rsync -avz --progress --delete --delete-excluded --exclude="VirtualBox VMs" --exclude=".cache" --exclude=".tmp" --exclude="Code/RT/crashdown/tmp" --exclude=".rbenv" . /media/Backup
