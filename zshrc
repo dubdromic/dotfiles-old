@@ -34,7 +34,8 @@ case $TERM in
   ;;
 esac
 
-[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
+[[ -s /etc/profile.d/autojump.zsh ]] && . /etc/profile.d/autojump.zsh
+[[ -s /etc/profile.d/infinality-settings.sh ]] && . /etc/profile.d/infinality-settings.sh
 
 eval "$(rbenv init -)"
 

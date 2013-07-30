@@ -1,3 +1,3 @@
 #!/bin/bash
 
-rsync -avz --progress --delete --delete-excluded --exclude="VirtualBox VMs" --exclude=".cache" --exclude=".tmp" --exclude="Code/RT/crashdown/tmp" --exclude=".rbenv" . /media/Backup
+rsync -av --progress --delete --delete-excluded --exclude="Storage" --exclude=".cache" --exclude=".tmp/*" --exclude="Code/RT/crashdown/tmp" /home/corin/ /home/corin/Storage/Backup

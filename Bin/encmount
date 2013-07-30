@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sudo cryptsetup luksOpen $1 $2
+sudo mkdir -p /media/$2
+sudo mount /dev/mapper/$2 /media/$2

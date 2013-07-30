@@ -9,7 +9,7 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod1
+set $mod Mod5
 
 # font for window titles. ISO 10646 = Unicode
 #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -31,15 +31,15 @@ floating_modifier $mod
 
 
 # start stuff
-bindsym $mod+Shift+Return exec xfce4-terminal
-bindsym $mod+Ctrl+l exec i3lock -d -c 000000
+bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Ctrl+l exec i3lock -c 000000
 #bindsym $mod+Ctrl+l exec gnome-screensaver-command -l
 bindsym $mod+d exec dmenu_run
 bindsym $mod+m exec thunderbird
 bindsym $mod+w exec firefox
 
 # kill focused window
-bindsym $mod+Shift+c kill
+bindsym $mod+c kill
 
 
 # change focus
@@ -172,7 +172,7 @@ bar {
 }
 
 for_window [class="Pidgin" instance="Pidgin"] floating enabled
-for_window [class="Steam" instance="Steam"] floating enabled
+for_window [class="Steam"] floating enabled
 for_window [class="Xchat"] floating enabled
 for_window [class="Xfce4-notifyd" instance="xfce4-notifyd"] floating enabled
 for_window [class="Gmrun"] floating enabled
@@ -185,10 +185,12 @@ for_window [class="Quicksynergy"] floating enabled
 
 workspace_layout stacking
 assign [class="Firefox"] 1
+assign [class="Xfce4-terminal"] 2
+assign [class="VirtualBox"] 3
 assign [class="Pidgin" instance="Pidgin"] 4
 
 exec --no-startup-id xsettingsd
+exec --no-startup-id virtualbox
 exec --no-startup-id pidgin
 exec --no-startup-id firefox
 exec --no-startup-id batti
-exec --no-startup-id mpd

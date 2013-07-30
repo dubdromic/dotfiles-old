@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo umount /media/$2
+sudo cryptsetup close /dev/mapper/$2

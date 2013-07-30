@@ -24,9 +24,10 @@ function disconnect(){
   fi
 }
 
-mode="$(grep -w "connected" /sys/class/drm/card0-DP-1/status)"
+modehdmi="$(grep -w "connected" /sys/class/drm/card0-DP-1/status)"
+modevga="$(grep -w "connected" /sys/class/drm/card0-VGA-1/status)"
 
-if [ -n "$mode" ]; then
+if [ -n "$modehdmi" ] || [ -n "$modevga" ]; then
   connect
 else
   disconnect

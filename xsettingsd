@@ -32,7 +32,7 @@ Gtk/RecentFilesEnabled 0
 Net/SoundThemeName "freedesktop"
 Net/CursorBlinkTime 1200
 Gtk/ShowInputMethodMenu 1
-Net/ThemeName "Adwaita"
+Net/ThemeName "Greybird"
 Gtk/TimeoutRepeat 20
 Net/IconThemeName "faenza"
 Net/FallbackIconTheme "gnome"
