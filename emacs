@@ -11,9 +11,16 @@
 (require 'tomorrow-night-theme)
 
 ;; write backups to a separate file
-(setq backup-directory-alist
-      `(("." . ,(expand-file-name
-		(concat user-emacs-directory "backups")))))
+(setq
+ backup-by-copying t
+ backup-directory-alist
+ '(("." . "~/.tmp"))
+ delete-old-versions t
+ kept-new-versions 5
+ kept-old-versions 2
+ version-control t)
+
+(remove-hook 'find-file-hooks 'vc-find-file-hook)
 
 ;; auto indent by default
 ;; (define-key global-map (kbd "RET") 'newline-and-indent)
