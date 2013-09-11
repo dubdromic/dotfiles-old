@@ -9,7 +9,7 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod5
+set $mod Mod1
 
 # font for window titles. ISO 10646 = Unicode
 #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -170,6 +170,11 @@ bar {
   }
 
 }
+
+workspace 1 output DP-1
+workspace 3 output DP-1
+workspace 2 output DVI-I-1
+workspace 4 output DVI-I-1
 
 for_window [class="Pidgin" instance="Pidgin"] floating enabled
 for_window [class="Steam"] floating enabled

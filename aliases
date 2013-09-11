@@ -16,4 +16,4 @@ alias be='bundle exec'
 alias music='ncmpcpp'
 alias pacup='sudo pacman -Syyu'
 alias ssh="TERM=xterm ssh"
-alias emacs="emacs -nw"
+alias emacs="em"
